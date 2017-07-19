@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box" style="font-size:100px;">&lt;&gt;&copy;&times;&nbsp;</div>
+</body>
+<script>
+    let box =document.getElementById( 'box' ),
+        a = new WeakMap( [
+            [
+                box,
+                {
+                    num : 1
+                }
+            ]
+        ] );
+    box.addEventListener( 'click', () => {
+        box.innerHTML = a.get( box ).num ++;
+    } )
+</script>
+</html>

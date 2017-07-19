@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">&lt;&gt;&copy;&times;</div>
+</body>
+<script>
+    let a = new WeakSet(),
+        box = document.getElementById( 'box' );
+    a.add( box );
+    console.log( a .has( box ) );
+    console.log(  );
+    box.addEventListener( 'click', function() {
+        console.log( 1 );
+    } );
+</script>
+</html>
